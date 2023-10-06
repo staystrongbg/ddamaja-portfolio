@@ -1,8 +1,9 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Share_Tech_Mono } from 'next/font/google';
-
-const shareTechMono = Share_Tech_Mono({ subsets: ['latin'], weight: '400' });
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
+import { ThemeProvider } from './context/themeContext';
+import { ralewaySans, robotoSlab } from './lib/fonts';
 
 export const metadata: Metadata = {
   title: 'Zoran - Javascript Developer',
@@ -16,7 +17,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={shareTechMono.className}>{children}</body>
+      <ThemeProvider>
+        <body className={ralewaySans.className}>
+          <div className="min-h-screen w-screen bg-white flex-col flex-container-center">
+            <Navigation />
+            <main className="flex-col w-full flex-container-center min-h-[85vh]">
+              {children}
+            </main>
+            <Footer />
+          </div>
+        </body>
+      </ThemeProvider>
     </html>
   );
 }
