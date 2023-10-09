@@ -13,11 +13,15 @@ html {
 #about,
 #projects,
 #contact {
-  @apply h-screen py-8 px-4 justify-center;
+  @apply h-screen py-8 px-4 justify-center flex items-center;
 }
 
 .code span {
   -webkit-text-stroke: 10px white; /* width and color */
   border-radius: 3px;
   text-shadow: 1px 1px 10px black;
+}
+
+.progress-bar {
+  @apply fixed top-[44px] left-0 right-0 h-2 origin-[0%] bg-gray-600;
 }

@@ -19,11 +19,11 @@ export default function RootLayout({
     <html lang="en">
       <ThemeProvider>
         <body className={ralewaySans.className}>
-          <div className="min-h-screen w-screen bg-white flex-col flex-container-center">
-            <Navigation />
+          <div className="min-h-screen w-screen bg-[white] flex-col flex-container-center">
             <main className="flex-col w-full flex-container-center min-h-[85vh]">
               {children}
             </main>
+            <Navigation />
             <Footer />
           </div>
         </body>

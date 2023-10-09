@@ -119,3 +119,72 @@ export const allTechnologies = [
     image: sass,
   },
 ];
+
+export const projects = [
+  {
+    id: 3,
+    img: './images/sikimoto.png',
+    link: 'https://sikimoto-app.netlify.app',
+    stack: 'Reactjs',
+  },
+
+  {
+    id: 5,
+    img: './images/mssrbija.png',
+    link: 'https://mssrbija.netlify.app',
+    stack: 'Reactjs',
+  },
+
+  {
+    id: 7,
+
+    img: './images/recepti.png',
+    link: 'https://devox-recepti.netlify.app',
+    stack: 'Reactjs, Firebase, TailwindCSS, GoogleAuth',
+  },
+  {
+    id: 8,
+    img: './images/kameleon.png',
+    link: 'https://sala-ketering-kameleon.com',
+    stack: 'Vanilajs, Sass',
+  },
+  {
+    id: 9,
+    img: './images/ciklogen-next.png',
+    link: 'https://ciklogen-next.vercel.app',
+    stack: 'Nextjs, Sass',
+  },
+  {
+    id: 1,
+    img: './images/ask23.png',
+    link: 'https://ask23.rs/',
+    stack: 'Nextjs, TailwindCSS, Sanity',
+  },
+  {
+    id: 2,
+    img: './images/devox-notes.png',
+    link: 'https://devox-notes.netlify.app/',
+    stack: 'Reactjs, Sass, Firebase, GoogleAuth',
+  },
+  {
+    id: 4,
+    img: './images/gallery.png',
+    link: 'https://shone-gallery.netlify.app/',
+    stack: [
+      {
+        title: 'Reactjs',
+        image: reactjs,
+      },
+      {
+        title: 'TailwindCSS',
+        image: twcss,
+      },
+      {
+        title: 'Prisma',
+        image: prisma,
+      },
+    ],
+  },
+];
+
+// mozda bi bilo fancy staviti i faq cisto nekoliko pitanja fore radi

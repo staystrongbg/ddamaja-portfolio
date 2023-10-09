@@ -15,7 +15,7 @@ function About() {
           my main areas of focus.
           <br />
           <br />
-          Other technologies I've been using: <br />
+          Other technologies I picked up along the way <br />
         </p>
         <div className="flex flex-wrap gap-8 py-8 max-w-xl">
           {allTechnologies.map((technology) => (

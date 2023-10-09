@@ -6,21 +6,16 @@ type ThemeContextType = {
   toggleMode: () => void;
   isScrolled: boolean;
   handleScroll: () => void;
-  isActive: number;
-  setIsActive: (value: number) => void;
 };
 const ThemeContext = createContext<ThemeContextType>({
   isDark: false,
   toggleMode: () => {},
   isScrolled: false,
   handleScroll: () => {},
-  isActive: 1,
-  setIsActive: (value: number) => {},
 });
 
 const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const [isDark, setIsDark] = useState(true);
-  const [isActive, setIsActive] = useState(1);
 
   const toggleMode = () => {
     setIsDark(!isDark);
@@ -46,8 +41,6 @@ const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
         toggleMode,
         isScrolled,
         handleScroll,
-        isActive,
-        setIsActive,
       }}
     >
       {children}
