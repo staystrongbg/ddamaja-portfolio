@@ -1,24 +1,24 @@
 'use client';
 import { useContext, createContext, useState, useEffect } from 'react';
-
+type Mode = 'light' | 'dark';
 type ThemeContextType = {
-  isDark: boolean;
+  isDark: Mode;
   toggleMode: () => void;
   isScrolled: boolean;
   handleScroll: () => void;
 };
 const ThemeContext = createContext<ThemeContextType>({
-  isDark: false,
+  isDark: 'dark',
   toggleMode: () => {},
   isScrolled: false,
   handleScroll: () => {},
 });
 
 const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState<Mode>('dark');
 
   const toggleMode = () => {
-    setIsDark(!isDark);
+    setIsDark((prev) => (prev === 'light' ? 'dark' : 'light'));
   };
 
   const [isScrolled, setIsScrolled] = useState(false);

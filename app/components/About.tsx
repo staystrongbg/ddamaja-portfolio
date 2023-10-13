@@ -1,9 +1,28 @@
+'use client';
 import Image from 'next/image';
 import { allTechnologies } from '../lib/data';
-
+import { useInView } from 'react-intersection-observer';
+import { useObserverContext } from '../context/intersectionObserver';
+import { useEffect } from 'react';
 function About() {
+  const { inView: aboutInView, ref: aboutRef, entry } = useInView();
+  const { setActiveSection, shouldObserverHandleScroll } = useObserverContext();
+  useEffect(() => {
+    if (entry?.isIntersecting && shouldObserverHandleScroll) {
+      setActiveSection('about');
+      entry?.target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+      });
+    }
+  }, [entry?.isIntersecting]);
+  //TODO: napraviti custom hook i arr svih sekcija pa na scroll event scrollinto view sekciju koja je na radu?
   return (
-    <div id="about" className="flex-col flex-container-center gap-12">
+    <div
+      id="about"
+      ref={aboutRef}
+      className="flex-col flex-container-center gap-12 my-8"
+    >
       <h3 className="text-[4em]">About me</h3>
       <div>
         <p className="max-w-xl">

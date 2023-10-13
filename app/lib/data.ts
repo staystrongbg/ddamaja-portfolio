@@ -15,6 +15,14 @@ import html from '@/public/html5-01-svgrepo-com.svg';
 import css from '@/public/css3-01-svgrepo-com.svg';
 import sass from '@/public/sass-svgrepo-com.svg';
 
+import sikimoto from '@/public/sikimoto.png';
+import mssrbija from '@/public/mssrbija.png';
+import recepti from '@/public/recepti.png';
+import kameleon from '@/public/kameleon.png';
+import ciklogen from '@/public/ciklogen.png';
+import ask23 from '@/public/ask23.png';
+import notes from '@/public/devox-notes.png';
+import gallery from '@/public/grid-gallery.png';
 export const links = [
   {
     title: 'Home',
@@ -122,53 +130,152 @@ export const allTechnologies = [
 
 export const projects = [
   {
+    title: 'Sikimoto',
     id: 3,
-    img: './images/sikimoto.png',
+    img: sikimoto,
     link: 'https://sikimoto-app.netlify.app',
-    stack: 'Reactjs',
+    stack: [
+      {
+        title: 'Reactjs',
+        image: reactjs,
+      },
+      {
+        title: 'TailwindCSS',
+        image: twcss,
+      },
+      {
+        title: 'Prisma',
+        image: prisma,
+      },
+    ],
   },
 
   {
+    title: 'MSSRbija',
     id: 5,
-    img: './images/mssrbija.png',
+    img: mssrbija,
     link: 'https://mssrbija.netlify.app',
-    stack: 'Reactjs',
+    stack: [
+      {
+        title: 'Reactjs',
+        image: reactjs,
+      },
+      {
+        title: 'TailwindCSS',
+        image: twcss,
+      },
+      {
+        title: 'Prisma',
+        image: prisma,
+      },
+    ],
   },
 
   {
+    title: 'Recepti',
     id: 7,
 
-    img: './images/recepti.png',
+    img: recepti,
     link: 'https://devox-recepti.netlify.app',
-    stack: 'Reactjs, Firebase, TailwindCSS, GoogleAuth',
+    stack: [
+      {
+        title: 'Reactjs',
+        image: reactjs,
+      },
+      {
+        title: 'TailwindCSS',
+        image: twcss,
+      },
+      {
+        title: 'Prisma',
+        image: prisma,
+      },
+    ],
   },
   {
+    title: 'Kameleon',
     id: 8,
-    img: './images/kameleon.png',
+    img: kameleon,
     link: 'https://sala-ketering-kameleon.com',
-    stack: 'Vanilajs, Sass',
+    stack: [
+      {
+        title: 'Reactjs',
+        image: reactjs,
+      },
+      {
+        title: 'TailwindCSS',
+        image: twcss,
+      },
+      {
+        title: 'Prisma',
+        image: prisma,
+      },
+    ],
   },
   {
+    title: 'Ciklogen',
     id: 9,
-    img: './images/ciklogen-next.png',
+    img: ciklogen,
     link: 'https://ciklogen-next.vercel.app',
-    stack: 'Nextjs, Sass',
+    stack: [
+      {
+        title: 'Reactjs',
+        image: reactjs,
+      },
+      {
+        title: 'TailwindCSS',
+        image: twcss,
+      },
+      {
+        title: 'Prisma',
+        image: prisma,
+      },
+    ],
   },
   {
+    title: 'ASK23',
     id: 1,
-    img: './images/ask23.png',
+    img: ask23,
     link: 'https://ask23.rs/',
-    stack: 'Nextjs, TailwindCSS, Sanity',
+    stack: [
+      {
+        title: 'Reactjs',
+        image: reactjs,
+      },
+      {
+        title: 'TailwindCSS',
+        image: twcss,
+      },
+      {
+        title: 'Prisma',
+        image: prisma,
+      },
+    ],
   },
   {
+    title: 'Notes',
     id: 2,
-    img: './images/devox-notes.png',
+    img: notes,
     link: 'https://devox-notes.netlify.app/',
-    stack: 'Reactjs, Sass, Firebase, GoogleAuth',
+    stack: [
+      {
+        title: 'Reactjs',
+        image: reactjs,
+      },
+      {
+        title: 'TailwindCSS',
+        image: twcss,
+      },
+      {
+        title: 'Prisma',
+        image: prisma,
+      },
+    ],
   },
   {
+    title: 'Gallery',
     id: 4,
-    img: './images/gallery.png',
+    img: gallery,
     link: 'https://shone-gallery.netlify.app/',
     stack: [
       {
