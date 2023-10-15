@@ -15,6 +15,23 @@ import html from '@/public/html5-01-svgrepo-com.svg';
 import css from '@/public/css3-01-svgrepo-com.svg';
 import sass from '@/public/sass-svgrepo-com.svg';
 
+import nextjsDark from '@/public/nextjs-icon-svgrepo-com-w.svg';
+import reactjsDark from '@/public/logo-react-svgrepo-com-w.svg';
+import twcssDark from '@/public/tailwindcss-svgrepo-com-w.svg';
+import prismaDark from '@/public/prisma-svgrepo-com-w.svg';
+import expressDark from '@/public/express-svgrepo-com-w.svg';
+import nodejsDark from '@/public/nodejs01-svgrepo-com-w.svg';
+import mongodbDark from '@/public/mongodb-svgrepo-com-w.svg';
+import typescriptDark from '@/public/typescript-16-svgrepo-com-w.svg';
+import firebaseDark from '@/public/firebase-svgrepo-com-w.svg';
+import postgresqlDark from '@/public/postgresql-svgrepo-com-w.svg';
+import sanityDark from '@/public/sanity-svgrepo-com-w.svg';
+import contentfulDark from '@/public/contentful-svgrepo-com-w.svg';
+import githubDark from '@/public/github-142-svgrepo-com-w.svg';
+import htmlDark from '@/public/html5-01-svgrepo-com-w.svg';
+import cssDark from '@/public/css3-01-svgrepo-com-w.svg';
+import sassDark from '@/public/sass-svgrepo-com-w.svg';
+
 import sikimoto from '@/public/sikimoto.png';
 import mssrbija from '@/public/mssrbija.png';
 import recepti from '@/public/recepti.png';
@@ -50,10 +67,12 @@ export const preferedStacks = [
   {
     title: 'Next.js',
     image: nextjs,
+    imageDark: nextjsDark,
   },
   {
     title: 'React.js',
     image: reactjs,
+    imageDark: reactjsDark,
   },
   //   {
   //     title: 'TailwindCSS',
@@ -65,66 +84,82 @@ export const allTechnologies = [
   {
     title: 'Next.js',
     image: nextjs,
+    imageDark: nextjsDark,
   },
   {
     title: 'React.js',
     image: reactjs,
+    imageDark: reactjsDark,
   },
   {
     title: 'TailwindCSS',
     image: twcss,
+    imageDark: twcssDark,
   },
   {
     title: 'Prisma',
     image: prisma,
+    imageDark: prismaDark,
   },
   {
     title: 'Express.js',
     image: express,
+    imageDark: expressDark,
   },
   {
     title: 'Node.js',
     image: nodejs,
+    imageDark: nodejsDark,
   },
   {
     title: 'MongoDB',
     image: mongodb,
+    imageDark: mongodbDark,
   },
   {
     title: 'TypeScript',
     image: typescript,
+    imageDark: typescriptDark,
   },
   {
     title: 'Firebase',
     image: firebase,
+    imageDark: firebaseDark,
   },
   {
     title: 'PostgreSQL',
     image: postgresql,
+    imageDark: postgresqlDark,
   },
   {
     title: 'Sanity',
     image: sanity,
+    imageDark: sanityDark,
   },
   {
     title: 'Contentful',
     image: contentful,
+    imageDark: contentfulDark,
   },
   {
     title: 'GitHub',
     image: github,
+    imageDark: githubDark,
   },
   {
     title: 'HTML',
     image: html,
+    imageDark: htmlDark,
   },
   {
     title: 'CSS',
     image: css,
+    imageDark: cssDark,
   },
   {
     title: 'SASS',
     image: sass,
+    imageDark: sassDark,
   },
 ];
 

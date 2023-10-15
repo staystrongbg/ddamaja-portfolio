@@ -9,20 +9,21 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useEffect } from 'react';
 import { useObserverContext } from '../context/intersectionObserver';
-import { useThemeContext } from '../context/themeContext';
+import { useTheme } from 'next-themes';
 function Intro() {
-  const { isDark } = useThemeContext();
   const { ref: introRef, entry, inView: introInView } = useInView();
 
   const { setActiveSection, shouldObserverHandleScroll } = useObserverContext();
 
+  const { theme } = useTheme();
+
   useEffect(() => {
-    if (entry?.isIntersecting && shouldObserverHandleScroll) {
+    if (entry?.isIntersecting) {
       setActiveSection('home');
-      entry?.target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      // entry?.target.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
   }, [entry?.isIntersecting]);
-
+  console.log('theme', theme);
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.5 }}
@@ -35,7 +36,7 @@ function Intro() {
         <div>
           <h1
             ref={introRef}
-            className={` text-gray-900 dark:text-yellow-300  text-[4em]  lg:text-[6em]  xl:text-[9em] ${bevanDisplay.className}`}
+            className={` main-header  text-[4em]  lg:text-[6em]  xl:text-[9em] ${bevanDisplay.className}`}
           >
             Welcome!
           </h1>
@@ -54,7 +55,7 @@ function Intro() {
             {preferedStacks.map((stack, idx) => (
               <span key={idx}>
                 <Image
-                  src={stack.image}
+                  src={theme === 'dark' ? stack.imageDark : stack.image}
                   alt={stack.title}
                   title={stack.title}
                   width={32}

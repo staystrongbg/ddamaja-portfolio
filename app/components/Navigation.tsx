@@ -1,20 +1,20 @@
 'use client';
 import { links } from '../lib/data';
 import { useThemeContext } from '../context/themeContext';
-import { robotoSlab } from '../lib/fonts';
+import { ralewaySans } from '../lib/fonts';
 import { motion, useScroll } from 'framer-motion';
 import { useObserverContext } from '../context/intersectionObserver';
 import Theme from './ThemeSwitcher';
+import { useState } from 'react';
 function Navigation() {
   //framer motion spring fn
   const { scrollYProgress } = useScroll();
   const { activeSection, setShouldObserverHandleScroll } = useObserverContext();
-  //scroll into view sa useref ali na scroll
-  console.log('activeSection', activeSection);
+  const [isActive, setIsActive] = useState(0);
   return (
     <>
       <nav
-        className={` ${robotoSlab.className} dark:bg-[#181123] z-[99] h-[5vh] flex items-center justify-center gap-8  px-6 py-2 rounded-sm left-0 w-full fixed transition-all border-b border-b-slate-200 dark:border-black  
+        className={` ${ralewaySans.className} dark:bg-[#181123] z-[99] h-[5vh] flex items-center justify-center gap-8  px-6 py-2 rounded-sm left-0 w-full fixed transition-all border-b border-b-slate-200 dark:border-black  
         }`}
       >
         <Theme />
@@ -39,7 +39,7 @@ function Navigation() {
 
               {activeSection === link.title.toLowerCase() && (
                 <div
-                  className={`h-[1px] w-full bg-gray-600 dark:bg-orange-700 transition-all  `}
+                  className={`h-[1px] w-full bg-gradient-to-r from-violet-500 to-fuchsia-500 transition-all  `}
                 />
               )}
             </li>
@@ -57,3 +57,6 @@ function Navigation() {
 export default Navigation;
 
 //logika bi bila on cick na perentu translateX bordera tj elementa  za onoliko piksela kolika je margina tj gap izmedju linkova
+//blurovani kod u pozadini da malo razbije monotoniju
+// implement sanity  client for blog
+//blog post treba da ima sliku,reach text,title,datum

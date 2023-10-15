@@ -11,14 +11,14 @@ function Projects() {
   const { setActiveSection, shouldObserverHandleScroll } = useObserverContext();
 
   useEffect(() => {
-    if (entry?.isIntersecting && shouldObserverHandleScroll) {
+    if (entry?.isIntersecting) {
       setActiveSection('projects');
-      entry?.target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      // entry?.target.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
   }, [entry?.isIntersecting]);
 
   return (
-    <div id="projects" className="flex-col flex-container-center my-8">
+    <div id="projects" className="flex-col my-8">
       <h3 className="text-[4em] mb-8" ref={projectsRef}>
         Projects
       </h3>

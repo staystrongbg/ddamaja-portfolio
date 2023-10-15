@@ -1,0 +1,41 @@
+/* mixins imported from blog */
+@mixin mobile {
+  @media (max-width: 450px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (max-width: 1260px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: 2000px) {
+    @content;
+  }
+}
+
+@mixin transparentBtn {
+  width: max-content;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  background: transparent;
+  border: 1px solid $blue;
+  color: #f1f2f3;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $blue;
+    color: $gray;
+  }
+}
