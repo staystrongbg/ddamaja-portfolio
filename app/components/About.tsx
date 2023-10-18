@@ -8,7 +8,7 @@ import { useTheme } from 'next-themes';
 import Glow from './common/Glow';
 function About() {
   const { inView: aboutInView, ref: aboutRef, entry } = useInView();
-  const { setActiveSection, shouldObserverHandleScroll } = useObserverContext();
+  const { setActiveSection } = useObserverContext();
   const { theme } = useTheme();
 
   useEffect(() => {

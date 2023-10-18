@@ -1,16 +1,13 @@
 'use client';
 import { links } from '../lib/data';
-import { useThemeContext } from '../context/themeContext';
 import { ralewaySans } from '../lib/fonts';
 import { motion, useScroll } from 'framer-motion';
 import { useObserverContext } from '../context/intersectionObserver';
 import Theme from './ThemeSwitcher';
-import { useState } from 'react';
 function Navigation() {
   //framer motion spring fn
   const { scrollYProgress } = useScroll();
   const { activeSection } = useObserverContext();
-  const [isActive, setIsActive] = useState(0);
   return (
     <>
       <nav

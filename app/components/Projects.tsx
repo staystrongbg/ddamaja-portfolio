@@ -2,18 +2,16 @@
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { useObserverContext } from '../context/intersectionObserver';
-import Image from 'next/image';
 import Project from './Project';
 import { projects } from '../lib/data';
 
 function Projects() {
   const { inView: projectsInView, ref: projectsRef, entry } = useInView();
-  const { setActiveSection, shouldObserverHandleScroll } = useObserverContext();
+  const { setActiveSection } = useObserverContext();
 
   useEffect(() => {
     if (entry?.isIntersecting) {
       setActiveSection('projects');
-      // entry?.target.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
   }, [entry?.isIntersecting]);
 

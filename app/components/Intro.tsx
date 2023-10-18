@@ -13,14 +13,13 @@ import Glow from './common/Glow';
 function Intro() {
   const { ref: introRef, entry, inView: introInView } = useInView();
 
-  const { setActiveSection, shouldObserverHandleScroll } = useObserverContext();
+  const { setActiveSection } = useObserverContext();
 
   const { theme } = useTheme();
 
   useEffect(() => {
     if (entry?.isIntersecting) {
       setActiveSection('home');
-      // entry?.target.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
   }, [entry?.isIntersecting]);
 
