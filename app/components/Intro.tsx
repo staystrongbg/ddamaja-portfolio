@@ -1,6 +1,4 @@
 'use client';
-import codeStickers from '@/public/sitckers.jpg';
-import keyboard from '@/public/keyboard.svg';
 import letscode from '@/public/code.svg';
 import { preferedStacks } from '../lib/data';
 import { bevanDisplay, ralewaySans } from '..//lib/fonts';
@@ -10,6 +8,8 @@ import { useInView } from 'react-intersection-observer';
 import { useEffect } from 'react';
 import { useObserverContext } from '../context/intersectionObserver';
 import { useTheme } from 'next-themes';
+import Glow from './common/Glow';
+
 function Intro() {
   const { ref: introRef, entry, inView: introInView } = useInView();
 
@@ -23,7 +23,7 @@ function Intro() {
       // entry?.target.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
   }, [entry?.isIntersecting]);
-  console.log('theme', theme);
+
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.5 }}
@@ -43,7 +43,6 @@ function Intro() {
           <h3
             className={` text-[4em] text-gray-600 dark:text-pink-200 whitespace-nowrap ${ralewaySans.className}`}
           >
-            {' '}
             I am Zoran
           </h3>
           <h3
@@ -51,16 +50,25 @@ function Intro() {
           >
             Javascript Developer{' '}
           </h3>
-          <div className="flex gap-4 mt-2">
+          <div className="flex gap-10 mt-6">
             {preferedStacks.map((stack, idx) => (
-              <span key={idx}>
+              <span
+                key={idx}
+                className="relative hover:scale-125 opacity-60 transition-transform
+              hover:opacity-100 "
+                title={stack.title}
+              >
                 <Image
                   src={theme === 'dark' ? stack.imageDark : stack.image}
                   alt={stack.title}
-                  title={stack.title}
-                  width={32}
-                  className="hover:scale-125 opacity-60 transition-transform
-                  hover:opacity-100"
+                  width={42}
+                  className=""
+                />
+
+                <Glow
+                  background="bg-gradient-to-r from-blue-500 to-cyan-500"
+                  width="w-full"
+                  height="h-[20px]"
                 />
               </span>
             ))}
@@ -68,6 +76,21 @@ function Intro() {
         </div>
       </div>
       <div className="code flex-1 flex items-center justify-center relative">
+        {theme === 'dark' ? (
+          <Glow
+            rotate="-rotate-12"
+            background="bg-gradient-to-r from-blue-950 to-cyan-800"
+            height="h-[95%]"
+            width="w-[95%]"
+          />
+        ) : (
+          <Glow
+            rotate="-rotate-12"
+            height="h-[95%]"
+            width="w-[95%]"
+            background="bg-gradient-to-r from-yellow-200 to-cyan-100"
+          />
+        )}
         <Image
           src={letscode}
           alt="lets-code"

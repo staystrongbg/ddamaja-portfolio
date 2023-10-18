@@ -19,7 +19,10 @@ function Projects() {
 
   return (
     <div id="projects" className="flex-col my-8">
-      <h3 className="text-[4em] mb-8" ref={projectsRef}>
+      <h3
+        className="text-[4em] mb-8 dark:text-[#55cebc] relative"
+        ref={projectsRef}
+      >
         Projects
       </h3>
       <div className="flex gap-4 flex-wrap items-center justify-center">

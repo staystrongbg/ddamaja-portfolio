@@ -9,12 +9,12 @@ import { useState } from 'react';
 function Navigation() {
   //framer motion spring fn
   const { scrollYProgress } = useScroll();
-  const { activeSection, setShouldObserverHandleScroll } = useObserverContext();
+  const { activeSection } = useObserverContext();
   const [isActive, setIsActive] = useState(0);
   return (
     <>
       <nav
-        className={` ${ralewaySans.className} dark:bg-[#181123] z-[99] h-[5vh] flex items-center justify-center gap-8  px-6 py-2 rounded-sm left-0 w-full fixed transition-all border-b border-b-slate-200 dark:border-black  
+        className={` ${ralewaySans.className} dark:bg-[#181123] bg-[#FFFFFF] z-[99] h-[5vh] flex items-center justify-center gap-8  px-6 py-2 rounded-sm left-0 w-full fixed transition-all border-b border-b-slate-200 dark:border-black  
         }`}
       >
         <Theme />
@@ -27,13 +27,9 @@ function Navigation() {
               onClick={() => {
                 //TODO: iskljuciti interceptor ka se klikne na link *default ponasanje hyperlinka*
                 //TODO: setovati active link pa ga dole proveriti ako jeste postaviti border
-                setShouldObserverHandleScroll(false);
-                setTimeout(() => {
-                  setShouldObserverHandleScroll(true);
-                }, 300);
               }}
               key={link.title}
-              className={`relative transition-all border-b-transparent border-b `}
+              className={`relative transition-all border-b-transparent border-b hover:border-b-fuchsia-500 `}
             >
               <a href={link.href}>{link.title}</a>
 

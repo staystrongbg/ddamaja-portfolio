@@ -40,6 +40,12 @@ import ciklogen from '@/public/ciklogen.png';
 import ask23 from '@/public/ask23.png';
 import notes from '@/public/devox-notes.png';
 import gallery from '@/public/grid-gallery.png';
+
+import linkedInDark from '@/public/iconmonstr-linkedin-4-w.svg';
+import linkedIn from '@/public/iconmonstr-linkedin-4.svg';
+import emailDark from '@/public/iconmonstr-email-1-w.svg';
+import email from '@/public/iconmonstr-email-1.svg';
+
 export const links = [
   {
     title: 'Home',
@@ -173,14 +179,7 @@ export const projects = [
       {
         title: 'Reactjs',
         image: reactjs,
-      },
-      {
-        title: 'TailwindCSS',
-        image: twcss,
-      },
-      {
-        title: 'Prisma',
-        image: prisma,
+        imageDark: reactjsDark,
       },
     ],
   },
@@ -194,14 +193,7 @@ export const projects = [
       {
         title: 'Reactjs',
         image: reactjs,
-      },
-      {
-        title: 'TailwindCSS',
-        image: twcss,
-      },
-      {
-        title: 'Prisma',
-        image: prisma,
+        imageDark: reactjsDark,
       },
     ],
   },
@@ -216,14 +208,12 @@ export const projects = [
       {
         title: 'Reactjs',
         image: reactjs,
+        imageDark: reactjsDark,
       },
       {
-        title: 'TailwindCSS',
-        image: twcss,
-      },
-      {
-        title: 'Prisma',
-        image: prisma,
+        title: 'Firebase',
+        image: firebase,
+        imageDark: firebaseDark,
       },
     ],
   },
@@ -234,16 +224,9 @@ export const projects = [
     link: 'https://sala-ketering-kameleon.com',
     stack: [
       {
-        title: 'Reactjs',
-        image: reactjs,
-      },
-      {
-        title: 'TailwindCSS',
-        image: twcss,
-      },
-      {
-        title: 'Prisma',
-        image: prisma,
+        title: 'Nextjs',
+        image: nextjs,
+        imageDark: nextjsDark,
       },
     ],
   },
@@ -254,16 +237,9 @@ export const projects = [
     link: 'https://ciklogen-next.vercel.app',
     stack: [
       {
-        title: 'Reactjs',
-        image: reactjs,
-      },
-      {
-        title: 'TailwindCSS',
-        image: twcss,
-      },
-      {
-        title: 'Prisma',
-        image: prisma,
+        title: 'Nextjs',
+        image: nextjs,
+        imageDark: nextjsDark,
       },
     ],
   },
@@ -274,16 +250,19 @@ export const projects = [
     link: 'https://ask23.rs/',
     stack: [
       {
-        title: 'Reactjs',
-        image: reactjs,
+        title: 'Nextjs',
+        image: nextjs,
+        imageDark: nextjsDark,
       },
       {
         title: 'TailwindCSS',
         image: twcss,
+        imageDark: twcssDark,
       },
       {
-        title: 'Prisma',
-        image: prisma,
+        title: 'Sanity',
+        image: sanity,
+        imageDark: sanityDark,
       },
     ],
   },
@@ -296,14 +275,12 @@ export const projects = [
       {
         title: 'Reactjs',
         image: reactjs,
+        imageDark: reactjsDark,
       },
       {
-        title: 'TailwindCSS',
-        image: twcss,
-      },
-      {
-        title: 'Prisma',
-        image: prisma,
+        title: 'Firebase',
+        image: firebase,
+        imageDark: firebaseDark,
       },
     ],
   },
@@ -314,19 +291,43 @@ export const projects = [
     link: 'https://shone-gallery.netlify.app/',
     stack: [
       {
-        title: 'Reactjs',
-        image: reactjs,
+        title: 'Nextjs',
+        image: nextjs,
+        imageDark: nextjsDark,
       },
       {
         title: 'TailwindCSS',
         image: twcss,
+        imageDark: twcssDark,
       },
       {
         title: 'Prisma',
         image: prisma,
+        imageDark: prismaDark,
       },
     ],
   },
 ];
 
 // mozda bi bilo fancy staviti i faq cisto nekoliko pitanja fore radi
+
+export const socialIcons = [
+  {
+    title: 'in/zlazarevic',
+    src: linkedIn,
+    imageDark: linkedInDark,
+    url: 'https://www.linkedin.com/in/zlazarevic/',
+  },
+  {
+    title: 'staystrongbg@gmail.com',
+    src: email,
+    imageDark: emailDark,
+    url: 'mailto:staystrongbg@gmail.com',
+  },
+  {
+    title: '/staystrongbg',
+    src: github,
+    imageDark: githubDark,
+    url: 'https://github.com/staystrongbg',
+  },
+];

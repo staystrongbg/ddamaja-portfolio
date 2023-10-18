@@ -59,19 +59,19 @@ html {
   object-fit: cover;
 }
 
-.code::after {
-  background: rgba(100, 0, 100, 0.18);
-  border-radius: 50%;
-  content: '';
-  -webkit-filter: blur(40px);
-  filter: blur(40px);
-  height: 1000px;
-  position: absolute;
-  right: 0;
-  top: -100px;
-  width: 1000px;
-  z-index: 0;
-}
+// .code::after {
+//   background: rgba(100, 0, 100, 0.18);
+//   border-radius: 50%;
+//   content: '';
+//   -webkit-filter: blur(40px);
+//   filter: blur(40px);
+//   height: 1000px;
+//   position: absolute;
+//   right: 0;
+//   top: -100px;
+//   width: 1000px;
+//   z-index: 0;
+// }
 
 .post {
   /* From https://css.glass */
