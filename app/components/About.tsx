@@ -22,7 +22,7 @@ function About() {
   }, [entry?.isIntersecting]);
   //TODO: napraviti custom hook i arr svih sekcija pa na scroll event scrollinto view sekciju koja je na radu?
   return (
-    <div id="about" className="flex-col flex-container-center gap-12 ">
+    <div id="about" className="flex-col flex-container-center gap-12">
       <h3 ref={aboutRef} className="text-[4em] dark:text-[#6ae2d0]  relative">
         About me
       </h3>

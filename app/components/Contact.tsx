@@ -21,7 +21,7 @@ function Contact() {
   return (
     <div
       id="contact"
-      className=" flex  justify-around items-center w-screen my-8 min-h-screen"
+      className=" flex  justify-around items-center w-screen my-8 min-h-screen "
     >
       <div className="flex gap-4 flex-col  ">
         <h3

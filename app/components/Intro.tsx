@@ -78,7 +78,7 @@ function Intro() {
         {theme === 'dark' ? (
           <Glow
             rotate="-rotate-12"
-            background="bg-gradient-to-r from-blue-950 to-cyan-800"
+            background="bg-gradient-to-r from-[#181123] via-cyan-800 to-[#181123]"
             height="h-[95%]"
             width="w-[95%]"
           />

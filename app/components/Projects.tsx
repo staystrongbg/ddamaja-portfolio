@@ -14,7 +14,7 @@ function Projects() {
       setActiveSection('projects');
     }
   }, [entry?.isIntersecting]);
-
+  //ubaciti kao kartice verticalne accordione stack deskripcija a  slika da ide preko ceolog polja
   return (
     <div id="projects" className="flex-col my-8">
       <h3

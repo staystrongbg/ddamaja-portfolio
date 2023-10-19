@@ -163,3 +163,24 @@ html {
 }
 
 // bg-gradient-to-r from-cyan-500 to-blue-500;
+
+@layer utilities {
+  .snap {
+    scroll-snap-type: var(--scroll-snap-direction) var(--scroll-snap-constraint);
+  }
+  .snap-y {
+    --scroll-snap-direction: y;
+  }
+  .snap-mandatory {
+    --scroll-snap-constraint: mandatory;
+  }
+  .snap-start {
+    scroll-snap-align: start;
+  }
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+}
