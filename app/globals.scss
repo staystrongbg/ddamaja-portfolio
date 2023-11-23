@@ -59,21 +59,7 @@ html {
   object-fit: cover;
 }
 
-// .code::after {
-//   background: rgba(100, 0, 100, 0.18);
-//   border-radius: 50%;
-//   content: '';
-//   -webkit-filter: blur(40px);
-//   filter: blur(40px);
-//   height: 1000px;
-//   position: absolute;
-//   right: 0;
-//   top: -100px;
-//   width: 1000px;
-//   z-index: 0;
-// }
-
-.post {
+.tags {
   /* From https://css.glass */
   background: rgba(0, 0, 0, 0.2);
   border-radius: 16px;
@@ -81,79 +67,23 @@ html {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(0, 0, 0, 0.3);
-  padding: 40px;
+  padding: 20px;
   border-radius: 8px;
-  gap: 50px;
-  color: #fff;
-  display: flex;
   @include laptop() {
     flex-direction: column;
   }
-  &:nth-child(2n) {
-    flex-direction: row-reverse;
-    @include laptop() {
-      flex-direction: column;
-    }
-    .post-img {
-      &::after {
-        top: 20px;
-        left: 20px;
-      }
-    }
+
+  button {
+    @include transparentBtn();
   }
-  .post-img {
-    flex: 1;
-    max-width: 500px;
-    max-height: 500px;
-    position: relative;
+}
 
-    @include laptop() {
-      max-width: 100%;
-    }
-    &::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-color: $blue;
-      top: 20px;
-      left: -20px;
-      border-radius: 10px;
+h2 {
+  @apply text-4xl font-bold mt-4 mb-4;
+}
 
-      z-index: -1;
-    }
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-  }
-  .post-content {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    gap: 40px;
-    h1 {
-      font-size: 54px;
-      color: $pink-color;
-    }
-
-    p {
-      color: #f1f2f3;
-      font-size: 16px;
-      letter-spacing: 0.71px;
-      line-height: 28px;
-      a {
-        color: $third-color;
-      }
-    }
-
-    button {
-      @include transparentBtn();
-    }
-  }
+h3 {
+  @apply text-3xl font-bold mt-6 mb-2;
 }
 
 .main-header {
@@ -183,4 +113,15 @@ html {
   writing-mode: vertical-rl;
   text-orientation: mixed;
   transform: rotate(180deg);
+}
+
+.perspective-right {
+  transform: perspective(1500px) rotateY(-15deg);
+  transition: transform 1s ease 0s;
+}
+.perspective-right:hover {
+  transform: perspective(3000px) rotateY(-5deg);
+  // box-shadow: none;
+  // transition: all 0.3s ease-out 0s;
+  // transition-delay: 0.2s;
 }

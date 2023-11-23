@@ -49,19 +49,19 @@ import email from '@/public/iconmonstr-email-1.svg';
 export const links = [
   {
     title: 'Home',
-    href: '#intro',
+    href: '/#intro',
   },
   {
     title: 'About',
-    href: '#about',
+    href: '/#about',
   },
   {
     title: 'Projects',
-    href: '#projects',
+    href: '/#projects',
   },
   {
     title: 'Contact',
-    href: '#contact',
+    href: '/#contact',
   },
   {
     title: 'Blog',
@@ -314,19 +314,19 @@ export const projects = [
 export const socialIcons = [
   {
     title: 'in/zlazarevic',
-    src: linkedIn,
+    image: linkedIn,
     imageDark: linkedInDark,
     url: 'https://www.linkedin.com/in/zlazarevic/',
   },
   {
     title: 'staystrongbg@gmail.com',
-    src: email,
+    image: email,
     imageDark: emailDark,
     url: 'mailto:staystrongbg@gmail.com',
   },
   {
     title: '/staystrongbg',
-    src: github,
+    image: github,
     imageDark: githubDark,
     url: 'https://github.com/staystrongbg',
   },

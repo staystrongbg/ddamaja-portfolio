@@ -1,7 +1,9 @@
 'use client';
+
 import { useRef } from 'react';
 import { sendEmail } from '../lib/actions';
 import Button from './Button';
+
 const Form = () => {
   const formRef = useRef<HTMLFormElement>(null);
   return (

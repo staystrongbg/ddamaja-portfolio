@@ -1,13 +1,15 @@
 'use client';
+
 import { links } from '../lib/data';
 import { ralewaySans } from '../lib/fonts';
 import { motion, useScroll } from 'framer-motion';
 import { useObserverContext } from '../context/intersectionObserver';
 import Theme from './ThemeSwitcher';
+import Link from 'next/link';
 function Navigation() {
   //framer motion spring fn
   const { scrollYProgress } = useScroll();
-  const { activeSection } = useObserverContext();
+  const { activeSection, setActiveSection } = useObserverContext();
   return (
     <>
       <nav
@@ -19,24 +21,28 @@ function Navigation() {
           className=" relative flex items-center gap-8 border-b-transparent border-b transition-all"
           id="bottom-nav "
         >
-          {links.map((link, idx) => (
-            <li
-              onClick={() => {
-                //TODO: iskljuciti interceptor ka se klikne na link *default ponasanje hyperlinka*
-                //TODO: setovati active link pa ga dole proveriti ako jeste postaviti border
-              }}
-              key={link.title}
-              className={`relative transition-all border-b-transparent border-b hover:border-b-fuchsia-500 `}
-            >
-              <a href={link.href}>{link.title}</a>
+          {links.map((link) => {
+            return (
+              <li
+                onClick={(e) => {
+                  //TODO: iskljuciti interceptor ka se klikne na link *default ponasanje hyperlinka*
+                  //TODO: setovati active link pa ga dole proveriti ako jeste postaviti border
+                  (e.target as HTMLElement).textContent === 'Blog' &&
+                    setActiveSection('blog');
+                }}
+                key={link.title}
+                className={`relative transition-all border-b-transparent border-b hover:border-b-fuchsia-500 `}
+              >
+                <Link href={link.href}>{link.title}</Link>
 
-              {activeSection === link.title.toLowerCase() && (
-                <div
-                  className={`h-[1px] w-full bg-gradient-to-r from-violet-500 to-fuchsia-500 transition-all  `}
-                />
-              )}
-            </li>
-          ))}
+                {activeSection === link.title.toLowerCase() && (
+                  <div
+                    className={`h-[1px] w-full bg-gradient-to-r from-violet-500 to-fuchsia-500 transition-all  `}
+                  />
+                )}
+              </li>
+            );
+          })}
         </ul>
         <motion.div
           className="progress-bar"

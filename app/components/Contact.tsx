@@ -7,11 +7,13 @@ import Image from 'next/image';
 import { socialIcons } from '../lib/data';
 import { useTheme } from 'next-themes';
 import Glow from './common/Glow';
+import { SocialIcons } from '../@types';
+import ThemedImage from './common/ThemedImage';
 
 function Contact() {
   const { inView: contactInView, ref: contactRef, entry } = useInView();
   const { setActiveSection } = useObserverContext();
-  const { theme } = useTheme();
+  // const { theme, resolvedTheme } = useTheme();
   useEffect(() => {
     if (entry?.isIntersecting) {
       setActiveSection('contact');
@@ -39,13 +41,14 @@ function Contact() {
               target="_blank"
             >
               <span className="relative">
-                <Image
-                  src={theme === 'dark' ? item.imageDark : item.src}
+                {/* <Image
+                  src={ThemedImage(item.image)}
                   alt={item.title}
                   width={32}
                   height={32}
                   className=""
-                />
+                /> */}
+                <ThemedImage themeImage={item} />
                 <Glow
                   background="bg-gradient-to-r from-yellow-500 to-pink-100"
                   width="w-full"

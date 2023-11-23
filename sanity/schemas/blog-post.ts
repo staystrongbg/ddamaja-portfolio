@@ -26,5 +26,26 @@ export const post = {
         hotspot: true,
       },
     },
+    {
+      name: 'slug',
+      type: 'slug',
+      title: 'slug',
+      options: {
+        source: 'title',
+      },
+    },
+    {
+      name: 'tags',
+      title: 'tags',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: {
+            type: 'tag',
+          },
+        },
+      ],
+    },
   ],
 };

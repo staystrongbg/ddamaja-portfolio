@@ -1,21 +1,10 @@
 'use client';
-import { useTheme } from 'next-themes';
-
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 import Glow from './common/Glow';
-type Project = {
-  title: string;
-  id: number;
-  img: StaticImageData;
-  link: string;
-  stack: {
-    title: string;
-    image: StaticImageData;
-    imageDark: StaticImageData;
-  }[];
-};
+import ThemedImage from './common/ThemedImage';
+import { Project } from '../@types';
+
 const Project = ({ project }: { project: Project }) => {
-  const { theme } = useTheme();
   return (
     <div className="flex items-center justify-center border rounded-lg  h-[300px]  overflow-hidden dark:border-black border-purple-200 shadow-lg transition-all">
       <div className="flex-1 items-center justify-center h-full flex dark:bg-[#040404] bg-gray-100  flex-col gap-12 ">
@@ -33,12 +22,7 @@ const Project = ({ project }: { project: Project }) => {
                 height="h-[20px]"
               />
 
-              <Image
-                src={theme === 'dark' ? item.imageDark : item.image}
-                alt={item.title}
-                width={32}
-                height={32}
-              />
+              <ThemedImage themeImage={item} />
             </li>
           ))}
         </ul>
