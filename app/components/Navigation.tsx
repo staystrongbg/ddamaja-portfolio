@@ -22,16 +22,12 @@ function Navigation() {
           id="bottom-nav "
         >
           {links.map((link) => {
-            if (link.title === 'Blog') {
-              setActiveSection('blog');
-              <Link href={link.href}>{link.title}</Link>;
-            }
             return (
               <li
                 key={link.title}
                 className={`relative transition-all border-b-transparent border-b hover:border-b-fuchsia-500 `}
               >
-                <a href={link.href}>{link.title}</a>
+                <Link href={link.href}>{link.title}</Link>
 
                 {activeSection === link.title.toLowerCase() && (
                   <div
