@@ -7,6 +7,7 @@ import { useObserverContext } from '../context/intersectionObserver';
 import Theme from './ThemeSwitcher';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
 function Navigation() {
   //framer motion spring fn
   const path = usePathname();
