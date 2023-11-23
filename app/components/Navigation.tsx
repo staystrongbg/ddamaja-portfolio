@@ -24,12 +24,6 @@ function Navigation() {
           {links.map((link) => {
             return (
               <li
-                onClick={(e) => {
-                  //TODO: iskljuciti interceptor ka se klikne na link *default ponasanje hyperlinka*
-                  //TODO: setovati active link pa ga dole proveriti ako jeste postaviti border
-                  (e.target as HTMLElement).textContent === 'Blog' &&
-                    setActiveSection('blog');
-                }}
                 key={link.title}
                 className={`relative transition-all border-b-transparent border-b hover:border-b-fuchsia-500 `}
               >
