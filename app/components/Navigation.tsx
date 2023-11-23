@@ -22,6 +22,7 @@ function Navigation() {
           id="bottom-nav "
         >
           {links.map((link) => {
+            link.title === 'Blog' && <Link href={link.href}>{link.title}</Link>;
             return (
               <li
                 key={link.title}
