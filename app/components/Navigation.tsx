@@ -27,7 +27,7 @@ function Navigation() {
                 key={link.title}
                 className={`relative transition-all border-b-transparent border-b hover:border-b-fuchsia-500 `}
               >
-                <Link href={link.href}>{link.title}</Link>
+                <a href={link.href}>{link.title}</a>
 
                 {activeSection === link.title.toLowerCase() && (
                   <div
