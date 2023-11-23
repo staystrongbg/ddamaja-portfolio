@@ -6,10 +6,17 @@ import { motion, useScroll } from 'framer-motion';
 import { useObserverContext } from '../context/intersectionObserver';
 import Theme from './ThemeSwitcher';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 function Navigation() {
   //framer motion spring fn
+  const path = usePathname();
   const { scrollYProgress } = useScroll();
   const { activeSection, setActiveSection } = useObserverContext();
+
+  if (path === '/blog') {
+    setActiveSection('blog');
+  }
+
   return (
     <>
       <nav
@@ -27,7 +34,9 @@ function Navigation() {
                 key={link.title}
                 className={`relative transition-all border-b-transparent border-b hover:border-b-fuchsia-500 `}
               >
-                <Link href={link.href}>{link.title}</Link>
+                <Link href={path === '/' ? link.href : '/' + link.href}>
+                  {link.title}
+                </Link>
 
                 {activeSection === link.title.toLowerCase() && (
                   <div
