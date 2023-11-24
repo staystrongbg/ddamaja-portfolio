@@ -12,6 +12,10 @@ function Projects() {
   useEffect(() => {
     if (entry?.isIntersecting) {
       setActiveSection('projects');
+      // entry?.target.scrollIntoView({
+      //   behavior: 'smooth',
+      //   block: 'center',
+      // });
     }
   }, [entry?.isIntersecting]);
   //ubaciti kao kartice verticalne accordione stack deskripcija a  slika da ide preko ceolog polja

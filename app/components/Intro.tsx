@@ -20,6 +20,10 @@ function Intro() {
   useEffect(() => {
     if (entry?.isIntersecting) {
       setActiveSection('home');
+      // entry?.target.scrollIntoView({
+      //   behavior: 'smooth',
+      //   block: 'center',
+      // });
     }
   }, [entry?.isIntersecting]);
   return (

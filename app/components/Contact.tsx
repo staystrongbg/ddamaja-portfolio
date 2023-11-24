@@ -17,6 +17,10 @@ function Contact() {
   useEffect(() => {
     if (entry?.isIntersecting) {
       setActiveSection('contact');
+      // entry?.target.scrollIntoView({
+      //   behavior: 'smooth',
+      //   block: 'center',
+      // });
     }
   }, [entry?.isIntersecting]);
 
