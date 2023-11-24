@@ -17,7 +17,6 @@ function Navigation() {
   if (path === '/blog') {
     setActiveSection('blog');
   }
-  console.log('activeSection', activeSection);
   return (
     <>
       <nav

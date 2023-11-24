@@ -32,7 +32,7 @@ function Intro() {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.3 }}
       id="intro"
-      className=" flex-container-center w-full sm:flex-row flex-col my-8"
+      className=" flex-container-center w-full lg:flex-row flex-col my-8"
     >
       <div className="flex flex-1 flex-col justify-center items-center">
         <div>

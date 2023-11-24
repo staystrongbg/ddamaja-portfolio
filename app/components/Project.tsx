@@ -1,8 +1,10 @@
 'use client';
+
 import Image from 'next/image';
 import Glow from './common/Glow';
 import ThemedImage from './common/ThemedImage';
 import { Project } from '../@types';
+import Link from 'next/link';
 
 const Project = ({ project }: { project: Project }) => {
   return (
@@ -28,12 +30,14 @@ const Project = ({ project }: { project: Project }) => {
         </ul>
       </div>
       <div className="flex-1 relative h-full w-[300px] grayscale hover:grayscale-0 transition-all">
-        <Image
-          src={project.img}
-          fill
-          className="absolute object-cover"
-          alt=""
-        />
+        <a href={project.link}>
+          <Image
+            src={project.img}
+            fill
+            className="absolute object-cover"
+            alt=""
+          />
+        </a>
       </div>
     </div>
   );
