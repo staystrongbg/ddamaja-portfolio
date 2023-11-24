@@ -17,7 +17,7 @@ function Navigation() {
   if (path === '/blog') {
     setActiveSection('blog');
   }
-
+  console.log('activeSection', activeSection);
   return (
     <>
       <nav
@@ -35,9 +35,7 @@ function Navigation() {
                 key={link.title}
                 className={`relative transition-all border-b-transparent border-b hover:border-b-fuchsia-500 `}
               >
-                <Link href={path === '/' ? link.href : '/' + link.href}>
-                  {link.title}
-                </Link>
+                <Link href={link.href}>{link.title}</Link>
 
                 {activeSection === link.title.toLowerCase() && (
                   <div

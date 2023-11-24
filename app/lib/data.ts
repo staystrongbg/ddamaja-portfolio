@@ -49,19 +49,19 @@ import email from '@/public/iconmonstr-email-1.svg';
 export const links = [
   {
     title: 'Home',
-    href: '#intro',
+    href: '/#intro',
   },
   {
     title: 'About',
-    href: '#about',
+    href: '/#about',
   },
   {
     title: 'Projects',
-    href: '#projects',
+    href: '/#projects',
   },
   {
     title: 'Contact',
-    href: '#contact',
+    href: '/#contact',
   },
   {
     title: 'Blog',

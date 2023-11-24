@@ -24,7 +24,6 @@ function Intro() {
   }, [entry?.isIntersecting]);
   return (
     <motion.div
-      ref={introRef}
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.3 }}
@@ -34,6 +33,7 @@ function Intro() {
       <div className="flex flex-1 flex-col justify-center items-center">
         <div>
           <h1
+            ref={introRef}
             className={` main-header  text-[4em]  lg:text-[6em]  xl:text-[9em] ${bevanDisplay.className}`}
           >
             Welcome!
