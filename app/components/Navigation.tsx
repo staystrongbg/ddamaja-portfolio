@@ -32,6 +32,7 @@ function Navigation() {
           {links.map((link) => {
             return (
               <li
+                onClick={() => setActiveSection(link.title.toLowerCase())}
                 key={link.title}
                 className={`relative transition-all border-b-transparent border-b hover:border-b-fuchsia-500 `}
               >
