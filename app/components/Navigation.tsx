@@ -37,7 +37,6 @@ function Navigation() {
                 className={`relative transition-all border-b-transparent border-b hover:border-b-fuchsia-500 `}
               >
                 <a href={link.href}>{link.title}</a>
-
                 {activeSection === link.title.toLowerCase() && (
                   <div
                     className={`h-[1px] w-full bg-gradient-to-r from-violet-500 to-fuchsia-500 transition-all  `}
