@@ -9,6 +9,11 @@ export const project = {
       type: 'string',
     },
     {
+      name: 'link',
+      title: 'Link',
+      type: 'url',
+    },
+    {
       name: 'image',
       title: 'Image',
       type: 'image',
@@ -31,3 +36,6 @@ export const project = {
     },
   ],
 };
+
+// stack is array reference to tech
+//tech is {title, image, imageDark}

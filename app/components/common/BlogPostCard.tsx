@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Tag from './Tag';
 import { usePostContext } from '@/app/context/postContext';
 import format from 'date-fns/format';
+import { PortableText } from '@portabletext/react';
 export default function BlogPostCard({ post }: { post: Post }) {
   const { setSearchResults } = usePostContext();
 
@@ -29,12 +30,12 @@ export default function BlogPostCard({ post }: { post: Post }) {
           <h3 className="text-4xl font-bold text-purple-700 dark:text-rose-200">
             {post.title}
           </h3>
-          <div className="mt-4">
-            {/* <PortableText value={post.text} /> */}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Consequuntur, sint dolorem aliquam voluptatem maxime asperiores
+          <div className="mt-4 overflow-hidden p-2">
+            <PortableText value={post.text} />
+            {/* Consequuntur, sint dolorem aliquam voluptatem maxime asperiores
             libero aut atque nam vitae cupiditate esse accusantium officia
             tempore quam adipisci repellat iusto eveniet!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. */}
           </div>
         </div>
       </article>
