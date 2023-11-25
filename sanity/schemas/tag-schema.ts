@@ -1,6 +1,6 @@
 export const tag = {
   name: 'tag',
-  title: 'Tag',
+  title: 'Tags',
   type: 'document',
   fields: [
     {

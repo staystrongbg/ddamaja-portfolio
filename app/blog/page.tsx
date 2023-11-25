@@ -1,3 +1,5 @@
+export const revalidate = '60s';
+
 import { getAllPosts } from '../lib/getPostsss';
 import Search from '../components/Search';
 import PostRenderer from '../components/PostRenderer';

@@ -29,7 +29,7 @@ export const project = {
         {
           type: 'reference',
           to: {
-            type: 'stack',
+            type: 'tech',
           },
         },
       ],

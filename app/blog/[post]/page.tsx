@@ -1,3 +1,5 @@
+export const revalidate = '60s';
+
 import Tag from '@/app/components/common/Tag';
 import { getPost } from '@/app/lib/getPost';
 import { PortableText } from '@portabletext/react';
