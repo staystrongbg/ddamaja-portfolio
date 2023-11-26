@@ -11,6 +11,7 @@ export default async function Blog() {
     "image": image.asset->url,
     "title": title,
     "text": text,
+    "shortText": shortDescription,
     "createdAt": _createdAt,
     "tags": tags[]->tag
   }`);

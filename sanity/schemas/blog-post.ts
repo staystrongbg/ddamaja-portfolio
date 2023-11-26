@@ -9,6 +9,11 @@ export const post = {
       type: 'string',
     },
     {
+      name: 'shortDescription',
+      title: 'Short Description',
+      type: 'string',
+    },
+    {
       name: 'text',
       title: 'Text',
       type: 'array',

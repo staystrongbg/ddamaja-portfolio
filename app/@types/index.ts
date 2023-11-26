@@ -29,6 +29,7 @@ export type Post = {
   image: string;
   text: PortableTextBlock;
   tags: string[];
+  shortText: string;
 };
 
 type Id = {

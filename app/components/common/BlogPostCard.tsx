@@ -31,7 +31,8 @@ export default function BlogPostCard({ post }: { post: Post }) {
             {post.title}
           </h3>
           <div className="mt-4 overflow-hidden p-2">
-            <PortableText value={post.text} />
+            {/* <PortableText value={post.text} /> */}
+            <p>{post.shortText}</p>
             {/* Consequuntur, sint dolorem aliquam voluptatem maxime asperiores
             libero aut atque nam vitae cupiditate esse accusantium officia
             tempore quam adipisci repellat iusto eveniet!

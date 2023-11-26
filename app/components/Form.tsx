@@ -1,10 +1,11 @@
 'use client';
 
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { sendEmail } from '../lib/actions';
 import Button from './Button';
 import emailjs from '@emailjs/browser';
 const Form = () => {
+  const [responseResult, setResponseResult] = useState('');
   const formRef = useRef<HTMLFormElement>(null);
   const resetForm = () => {
     formRef.current?.reset();
@@ -22,10 +23,17 @@ const Form = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          setResponseResult('Thank you for your message!');
+          setTimeout(() => {
+            setResponseResult('');
+          }, 3000);
         },
         (error) => {
           console.log(error.text);
+          setResponseResult('Something went wrong, please try again later!');
+          setTimeout(() => {
+            setResponseResult('');
+          }, 3000);
         }
       );
     resetForm();
@@ -33,6 +41,7 @@ const Form = () => {
   return (
     <form
       ref={formRef}
+      // this approach is using server actions and resend library via sendemail fn
       // action={async (formData) => {
       //   formRef.current?.reset();
       //   await sendEmail(formData);
@@ -66,6 +75,11 @@ const Form = () => {
       ></textarea>
       {/* this has to eb its own client component inside form element */}
       <Button />
+      {responseResult && (
+        <p className="text-center text-gray-700 dark:text-fuchsia-400">
+          {responseResult}
+        </p>
+      )}
     </form>
   );
 };
