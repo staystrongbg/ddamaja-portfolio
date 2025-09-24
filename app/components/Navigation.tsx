@@ -1,21 +1,21 @@
-'use client';
+"use client";
 
-import { links } from '../lib/data';
-import { ralewaySans } from '../lib/fonts';
-import { motion, useScroll } from 'framer-motion';
-import { useObserverContext } from '../context/intersectionObserver';
-import Theme from './ThemeSwitcher';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { useSearchParams } from 'next/navigation';
+import { links } from "../lib/data";
+import { ralewaySans } from "../lib/fonts";
+import { motion, useScroll } from "framer-motion";
+import { useObserverContext } from "../context/intersectionObserver";
+import Theme from "./ThemeSwitcher";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 function Navigation() {
   //framer motion spring fn
   const path = usePathname();
   const { scrollYProgress } = useScroll();
   const { activeSection, setActiveSection } = useObserverContext();
 
-  if (path === '/blog') {
-    setActiveSection('blog');
+  if (path === "/blog") {
+    setActiveSection("blog");
   }
   return (
     <>

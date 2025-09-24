@@ -1,15 +1,15 @@
-import './globals.scss';
-import type { Metadata } from 'next';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
+import "./globals.scss";
+import type { Metadata } from "next";
+import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
 // import { ThemeProvider } from './context/themeContext';
-import { ralewaySans, robotoSlab } from './lib/fonts';
-import { ThemeProvider } from './components/Theme-provider';
-import { ObserverProvider } from './context/intersectionObserver';
-import { PostProvider } from './context/postContext';
+import { ralewaySans, robotoSlab } from "./lib/fonts";
+import { ThemeProvider } from "./components/Theme-provider";
+import { ObserverProvider } from "./context/intersectionObserver";
+import { PostProvider } from "./context/postContext";
 export const metadata: Metadata = {
-  title: 'Zoran - Javascript Developer',
-  description: 'My Portfolio Page',
+  title: "Zoran - Javascript Developer",
+  description: "My Portfolio Page",
 };
 
 export default function RootLayout({
@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <PostProvider>
         <ObserverProvider>
           <body className={`${ralewaySans.className} overflow-x-hidden`}>

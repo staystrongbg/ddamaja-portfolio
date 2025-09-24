@@ -1,82 +1,82 @@
-import nextjs from '@/public/nextjs-icon-svgrepo-com.svg';
-import reactjs from '@/public/logo-react-svgrepo-com.svg';
-import twcss from '@/public/tailwindcss-svgrepo-com.svg';
-import prisma from '@/public/prisma-svgrepo-com.svg';
-import express from '@/public/express-svgrepo-com.svg';
-import nodejs from '@/public/nodejs01-svgrepo-com.svg';
-import mongodb from '@/public/mongodb-svgrepo-com.svg';
-import typescript from '@/public/typescript-16-svgrepo-com.svg';
-import firebase from '@/public/firebase-svgrepo-com.svg';
-import postgresql from '@/public/postgresql-svgrepo-com.svg';
-import sanity from '@/public/sanity-svgrepo-com.svg';
-import contentful from '@/public/contentful-svgrepo-com.svg';
-import github from '@/public/github-142-svgrepo-com.svg';
-import html from '@/public/html5-01-svgrepo-com.svg';
-import css from '@/public/css3-01-svgrepo-com.svg';
-import sass from '@/public/sass-svgrepo-com.svg';
+import nextjs from "@/public/nextjs-icon-svgrepo-com.svg";
+import reactjs from "@/public/logo-react-svgrepo-com.svg";
+import twcss from "@/public/tailwindcss-svgrepo-com.svg";
+import prisma from "@/public/prisma-svgrepo-com.svg";
+import express from "@/public/express-svgrepo-com.svg";
+import nodejs from "@/public/nodejs01-svgrepo-com.svg";
+import mongodb from "@/public/mongodb-svgrepo-com.svg";
+import typescript from "@/public/typescript-16-svgrepo-com.svg";
+import firebase from "@/public/firebase-svgrepo-com.svg";
+import postgresql from "@/public/postgresql-svgrepo-com.svg";
+import sanity from "@/public/sanity-svgrepo-com.svg";
+import contentful from "@/public/contentful-svgrepo-com.svg";
+import github from "@/public/github-142-svgrepo-com.svg";
+import html from "@/public/html5-01-svgrepo-com.svg";
+import css from "@/public/css3-01-svgrepo-com.svg";
+import sass from "@/public/sass-svgrepo-com.svg";
 
-import nextjsDark from '@/public/nextjs-icon-svgrepo-com-w.svg';
-import reactjsDark from '@/public/logo-react-svgrepo-com-w.svg';
-import twcssDark from '@/public/tailwindcss-svgrepo-com-w.svg';
-import prismaDark from '@/public/prisma-svgrepo-com-w.svg';
-import expressDark from '@/public/express-svgrepo-com-w.svg';
-import nodejsDark from '@/public/nodejs01-svgrepo-com-w.svg';
-import mongodbDark from '@/public/mongodb-svgrepo-com-w.svg';
-import typescriptDark from '@/public/typescript-16-svgrepo-com-w.svg';
-import firebaseDark from '@/public/firebase-svgrepo-com-w.svg';
-import postgresqlDark from '@/public/postgresql-svgrepo-com-w.svg';
-import sanityDark from '@/public/sanity-svgrepo-com-w.svg';
-import contentfulDark from '@/public/contentful-svgrepo-com-w.svg';
-import githubDark from '@/public/github-142-svgrepo-com-w.svg';
-import htmlDark from '@/public/html5-01-svgrepo-com-w.svg';
-import cssDark from '@/public/css3-01-svgrepo-com-w.svg';
-import sassDark from '@/public/sass-svgrepo-com-w.svg';
+import nextjsDark from "@/public/nextjs-icon-svgrepo-com-w.svg";
+import reactjsDark from "@/public/logo-react-svgrepo-com-w.svg";
+import twcssDark from "@/public/tailwindcss-svgrepo-com-w.svg";
+import prismaDark from "@/public/prisma-svgrepo-com-w.svg";
+import expressDark from "@/public/express-svgrepo-com-w.svg";
+import nodejsDark from "@/public/nodejs01-svgrepo-com-w.svg";
+import mongodbDark from "@/public/mongodb-svgrepo-com-w.svg";
+import typescriptDark from "@/public/typescript-16-svgrepo-com-w.svg";
+import firebaseDark from "@/public/firebase-svgrepo-com-w.svg";
+import postgresqlDark from "@/public/postgresql-svgrepo-com-w.svg";
+import sanityDark from "@/public/sanity-svgrepo-com-w.svg";
+import contentfulDark from "@/public/contentful-svgrepo-com-w.svg";
+import githubDark from "@/public/github-142-svgrepo-com-w.svg";
+import htmlDark from "@/public/html5-01-svgrepo-com-w.svg";
+import cssDark from "@/public/css3-01-svgrepo-com-w.svg";
+import sassDark from "@/public/sass-svgrepo-com-w.svg";
 
-import sikimoto from '@/public/sikimoto.png';
-import mssrbija from '@/public/mssrbija.png';
-import recepti from '@/public/recepti.png';
-import kameleon from '@/public/kameleon.png';
-import ciklogen from '@/public/ciklogen.png';
-import ask23 from '@/public/ask23.png';
-import notes from '@/public/devox-notes.png';
-import gallery from '@/public/grid-gallery.png';
+import sikimoto from "@/public/sikimoto.png";
+import mssrbija from "@/public/mssrbija.png";
+import recepti from "@/public/recepti.png";
+import kameleon from "@/public/kameleon.png";
+import ciklogen from "@/public/ciklogen.png";
+import ask23 from "@/public/ask23.png";
+import notes from "@/public/devox-notes.png";
+import gallery from "@/public/grid-gallery.png";
 
-import linkedInDark from '@/public/iconmonstr-linkedin-4-w.svg';
-import linkedIn from '@/public/iconmonstr-linkedin-4.svg';
-import emailDark from '@/public/iconmonstr-email-1-w.svg';
-import email from '@/public/iconmonstr-email-1.svg';
+import linkedInDark from "@/public/iconmonstr-linkedin-4-w.svg";
+import linkedIn from "@/public/iconmonstr-linkedin-4.svg";
+import emailDark from "@/public/iconmonstr-email-1-w.svg";
+import email from "@/public/iconmonstr-email-1.svg";
 
 export const links = [
   {
-    title: 'Home',
-    href: '/#intro',
+    title: "Home",
+    href: "/#intro",
   },
   {
-    title: 'About',
-    href: '/#about',
+    title: "About",
+    href: "/#about",
   },
   {
-    title: 'Projects',
-    href: '/#projects',
+    title: "Projects",
+    href: "/#projects",
   },
   {
-    title: 'Contact',
-    href: '/#contact',
+    title: "Contact",
+    href: "/#contact",
   },
   {
-    title: 'Blog',
-    href: '/blog',
+    title: "Blog",
+    href: "/blog",
   },
 ];
 
 export const preferedStacks = [
   {
-    title: 'Next.js',
+    title: "Next.js",
     image: nextjs,
     imageDark: nextjsDark,
   },
   {
-    title: 'React.js',
+    title: "React.js",
     image: reactjs,
     imageDark: reactjsDark,
   },
@@ -88,82 +88,82 @@ export const preferedStacks = [
 
 export const allTechnologies = [
   {
-    title: 'Next.js',
+    title: "Next.js",
     image: nextjs,
     imageDark: nextjsDark,
   },
   {
-    title: 'React.js',
+    title: "React.js",
     image: reactjs,
     imageDark: reactjsDark,
   },
   {
-    title: 'TailwindCSS',
+    title: "TailwindCSS",
     image: twcss,
     imageDark: twcssDark,
   },
   {
-    title: 'Prisma',
+    title: "Prisma",
     image: prisma,
     imageDark: prismaDark,
   },
   {
-    title: 'Express.js',
+    title: "Express.js",
     image: express,
     imageDark: expressDark,
   },
   {
-    title: 'Node.js',
+    title: "Node.js",
     image: nodejs,
     imageDark: nodejsDark,
   },
   {
-    title: 'MongoDB',
+    title: "MongoDB",
     image: mongodb,
     imageDark: mongodbDark,
   },
   {
-    title: 'TypeScript',
+    title: "TypeScript",
     image: typescript,
     imageDark: typescriptDark,
   },
   {
-    title: 'Firebase',
+    title: "Firebase",
     image: firebase,
     imageDark: firebaseDark,
   },
   {
-    title: 'PostgreSQL',
+    title: "PostgreSQL",
     image: postgresql,
     imageDark: postgresqlDark,
   },
   {
-    title: 'Sanity',
+    title: "Sanity",
     image: sanity,
     imageDark: sanityDark,
   },
   {
-    title: 'Contentful',
+    title: "Contentful",
     image: contentful,
     imageDark: contentfulDark,
   },
   {
-    title: 'GitHub',
+    title: "GitHub",
     image: github,
     imageDark: githubDark,
   },
   {
-    title: 'HTML',
+    title: "HTML",
     image: html,
     imageDark: htmlDark,
   },
   {
-    title: 'CSS',
+    title: "CSS",
     image: css,
     imageDark: cssDark,
   },
   {
-    title: 'SASS',
+    title: "SASS",
     image: sass,
     imageDark: sassDark,
   },
@@ -171,13 +171,13 @@ export const allTechnologies = [
 
 export const projects = [
   {
-    title: 'Sikimoto',
+    title: "Sikimoto",
     id: 3,
     img: sikimoto,
-    link: 'https://sikimoto-app.netlify.app',
+    link: "https://sikimoto-app.netlify.app",
     stack: [
       {
-        title: 'Reactjs',
+        title: "Reactjs",
         image: reactjs,
         imageDark: reactjsDark,
       },
@@ -185,13 +185,13 @@ export const projects = [
   },
 
   {
-    title: 'MSSRbija',
+    title: "MSSRbija",
     id: 5,
     img: mssrbija,
-    link: 'https://mssrbija.netlify.app',
+    link: "https://mssrbija.netlify.app",
     stack: [
       {
-        title: 'Reactjs',
+        title: "Reactjs",
         image: reactjs,
         imageDark: reactjsDark,
       },
@@ -199,109 +199,109 @@ export const projects = [
   },
 
   {
-    title: 'Recepti',
+    title: "Recepti",
     id: 7,
 
     img: recepti,
-    link: 'https://devox-recepti.netlify.app',
+    link: "https://devox-recepti.netlify.app",
     stack: [
       {
-        title: 'Reactjs',
+        title: "Reactjs",
         image: reactjs,
         imageDark: reactjsDark,
       },
       {
-        title: 'Firebase',
+        title: "Firebase",
         image: firebase,
         imageDark: firebaseDark,
       },
     ],
   },
   {
-    title: 'Kameleon',
+    title: "Kameleon",
     id: 8,
     img: kameleon,
-    link: 'https://sala-ketering-kameleon.com',
+    link: "https://sala-ketering-kameleon.com",
     stack: [
       {
-        title: 'Nextjs',
+        title: "Nextjs",
         image: nextjs,
         imageDark: nextjsDark,
       },
     ],
   },
   {
-    title: 'Ciklogen',
+    title: "Ciklogen",
     id: 9,
     img: ciklogen,
-    link: 'https://ciklogen-next.vercel.app',
+    link: "https://ciklogen-next.vercel.app",
     stack: [
       {
-        title: 'Nextjs',
+        title: "Nextjs",
         image: nextjs,
         imageDark: nextjsDark,
       },
     ],
   },
   {
-    title: 'ASK23',
+    title: "ASK23",
     id: 1,
     img: ask23,
-    link: 'https://ask23.rs/',
+    link: "https://ask23.rs/",
     stack: [
       {
-        title: 'Nextjs',
+        title: "Nextjs",
         image: nextjs,
         imageDark: nextjsDark,
       },
       {
-        title: 'TailwindCSS',
+        title: "TailwindCSS",
         image: twcss,
         imageDark: twcssDark,
       },
       {
-        title: 'Sanity',
+        title: "Sanity",
         image: sanity,
         imageDark: sanityDark,
       },
     ],
   },
   {
-    title: 'Notes',
+    title: "Notes",
     id: 2,
     img: notes,
-    link: 'https://devox-notes.netlify.app/',
+    link: "https://devox-notes.netlify.app/",
     stack: [
       {
-        title: 'Reactjs',
+        title: "Reactjs",
         image: reactjs,
         imageDark: reactjsDark,
       },
       {
-        title: 'Firebase',
+        title: "Firebase",
         image: firebase,
         imageDark: firebaseDark,
       },
     ],
   },
   {
-    title: 'Gallery',
+    title: "Gallery",
     id: 4,
     img: gallery,
-    link: 'https://shone-gallery.netlify.app/',
+    link: "https://shone-gallery.netlify.app/",
     stack: [
       {
-        title: 'Nextjs',
+        title: "Nextjs",
         image: nextjs,
         imageDark: nextjsDark,
       },
       {
-        title: 'TailwindCSS',
+        title: "TailwindCSS",
         image: twcss,
         imageDark: twcssDark,
       },
       {
-        title: 'Prisma',
+        title: "Prisma",
         image: prisma,
         imageDark: prismaDark,
       },
@@ -313,21 +313,21 @@ export const projects = [
 
 export const socialIcons = [
   {
-    title: 'in/zlazarevic',
+    title: "in/zlazarevic",
     image: linkedIn,
     imageDark: linkedInDark,
-    url: 'https://www.linkedin.com/in/zlazarevic/',
+    url: "https://www.linkedin.com/in/zlazarevic/",
   },
   {
-    title: 'staystrongbg@gmail.com',
+    title: "ddamajadev@gmail.com",
     image: email,
     imageDark: emailDark,
-    url: 'mailto:staystrongbg@gmail.com',
+    url: "mailto:ddamajadev@gmail.com",
   },
   {
-    title: '/staystrongbg',
+    title: "/staystrongbg",
     image: github,
     imageDark: githubDark,
-    url: 'https://github.com/staystrongbg',
+    url: "https://github.com/staystrongbg",
   },
 ];
