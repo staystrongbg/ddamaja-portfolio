@@ -1,13 +1,13 @@
-'use client';
-import Image from 'next/image';
-import { allTechnologies } from '../lib/data';
-import { useInView } from 'react-intersection-observer';
-import { useObserverContext } from '../context/intersectionObserver';
-import { useEffect } from 'react';
-import { useTheme } from 'next-themes';
-import Glow from './common/Glow';
-import ThemedImage from './common/ThemedImage';
-import me from '../../public/me.jpeg';
+"use client";
+import Image from "next/image";
+import { allTechnologies } from "../lib/data";
+import { useInView } from "react-intersection-observer";
+import { useObserverContext } from "../context/intersectionObserver";
+import { useEffect } from "react";
+import { useTheme } from "next-themes";
+import Glow from "./common/Glow";
+import ThemedImage from "./common/ThemedImage";
+import me from "../../public/me.jpeg";
 function About() {
   const { inView: aboutInView, ref: aboutRef, entry } = useInView();
   const { setActiveSection } = useObserverContext();
@@ -15,7 +15,7 @@ function About() {
 
   useEffect(() => {
     if (entry?.isIntersecting) {
-      setActiveSection('about');
+      setActiveSection("about");
       // entry?.target.scrollIntoView({
       //   behavior: 'smooth',
       //   block: 'center',
@@ -36,17 +36,22 @@ function About() {
         <div>
           <p className="max-w-xl">
             <b>Goal</b>
+            <br />I stay current with evolving <b>JavaScript</b> technologies
+            and actively work with <b>Nextjs</b> and <b>Typescript</b>, always
+            exploring new tools and methodologies to improve code quality.
             <br />
-            I work hard to attain best knowledge and skills in modern web
-            development. I enjoy learning new technologies and frameworks.
+            <br />
+            I enjoy the continuous learning that web development demands, with
+            my strongest skills focused on creating responsive, user-focused
+            interfaces.
             <br />
             <br />
-            <b>Summary</b>
+            {/* <b>Summary</b>
             <br />I am working with <b>JavaScript</b> for 9 years, 4 years with
             <b> React.js</b> and over 2 years with <b>Next.js</b>. These have
             been my main areas of focus.
             <br />
-            <br />
+            <br /> */}
             Other technologies I picked up along the way <br />
           </p>
           <div className="flex flex-wrap gap-8 py-8 max-w-xl">
