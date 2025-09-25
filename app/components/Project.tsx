@@ -1,10 +1,9 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import Glow from './common/Glow';
-import ThemedImage from './common/ThemedImage';
-import { Project } from '../@types';
-import Link from 'next/link';
+import Image from "next/image";
+import Glow from "./common/Glow";
+import ThemedImage from "./common/ThemedImage";
+import { type Project } from "../@types";
 
 const Project = ({ project }: { project: Project }) => {
   return (

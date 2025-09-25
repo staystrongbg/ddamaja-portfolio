@@ -5,7 +5,7 @@ const Form = () => {
   return (
     <form
       action={sendEmail}
-      className="flex flex-col gap-4 p-4 w-[600px] h-fit border border-purple-200  dark:border-purple-900 rounded-lg shadow-lg
+      className="flex flex-col gap-4 p-4 max-w-[600px] w-full h-fit border border-purple-200  dark:border-purple-900 rounded-lg shadow-lg
 "
     >
       <input

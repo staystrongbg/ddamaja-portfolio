@@ -1,9 +1,9 @@
-'use client';
-import { useEffect } from 'react';
-import { useInView } from 'react-intersection-observer';
-import { useObserverContext } from '../context/intersectionObserver';
-import Project from './Project';
-import { projects } from '../lib/data';
+"use client";
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+import { useObserverContext } from "../context/intersectionObserver";
+import Project from "./Project";
+import { projects } from "../lib/data";
 
 function Projects() {
   const { inView: projectsInView, ref: projectsRef, entry } = useInView();
@@ -11,7 +11,7 @@ function Projects() {
 
   useEffect(() => {
     if (entry?.isIntersecting) {
-      setActiveSection('projects');
+      setActiveSection("projects");
       // entry?.target.scrollIntoView({
       //   behavior: 'smooth',
       //   block: 'center',
@@ -27,7 +27,7 @@ function Projects() {
       >
         Projects
       </h3>
-      <div className="flex gap-4 flex-wrap items-center justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {projects.map((project, idx) => (
           <Project key={idx} project={project} />
         ))}

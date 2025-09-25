@@ -28,8 +28,8 @@ function About() {
       <h3 ref={aboutRef} className="text-[4em] dark:text-[#6ae2d0]  relative">
         About me
       </h3>
-      <div className="flex gap-8 ">
-        <div className="relative w-[150px] rounded-lg overflow-hidden">
+      <div className="flex gap-8">
+        <div className="relative w-[150px] hidden md:block rounded-lg overflow-hidden">
           <Image src={me} fill alt="Zoran" objectFit="cover" className="  " />
           <div className="absolute inset-0 bg-gray-300 mix-blend-multiply"></div>
         </div>
