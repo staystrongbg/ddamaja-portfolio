@@ -1,13 +1,17 @@
-export const revalidate = "60s";
+export const revalidate = 60;
 
 import Tag from "@/app/components/common/Tag";
 import { getPost } from "@/app/lib/getPost";
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 
-export default async function Post({ params }: { params: { post: string } }) {
+export default async function Post({
+  params,
+}: {
+  params: Promise<{ post: string }>;
+}) {
   const [post] = await getPost(
-    `*[_type == "post" && slug.current == "${params.post}"]{
+    `*[_type == "post" && slug.current == "${(await params).post}"]{
       "id": slug.current,
       "image": image.asset->url,
       "title": title,

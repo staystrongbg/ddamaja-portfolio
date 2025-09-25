@@ -24,9 +24,7 @@ export async function sendEmail(formData: FormData) {
     });
 
     console.log("Email sent successfully");
-    return { status: "success", message: "Email sent successfully" };
   } catch (error: any) {
     console.log("Error sending email", error);
-    return { status: "error", message: "Error sending email" };
   }
 }

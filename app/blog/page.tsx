@@ -1,9 +1,9 @@
-export const revalidate = '60s';
+export const revalidate = 60;
 
-import { getAllPosts } from '../lib/getPostsss';
-import Search from '../components/Search';
-import PostRenderer from '../components/PostRenderer';
-import Tag from '../components/common/Tag';
+import { getAllPosts } from "../lib/getPostsss";
+import Search from "../components/Search";
+import PostRenderer from "../components/PostRenderer";
+import Tag from "../components/common/Tag";
 
 export default async function Blog() {
   const posts = await getAllPosts(`*[_type == "post"]{
@@ -17,7 +17,7 @@ export default async function Blog() {
   }`);
 
   if (!posts) {
-    throw new Error('No posts');
+    throw new Error("No posts");
   }
 
   const flatenedArray = posts.flatMap((post) => post.tags); //posts objects with tags[]
