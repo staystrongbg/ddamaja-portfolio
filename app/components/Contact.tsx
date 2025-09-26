@@ -1,14 +1,14 @@
-'use client';
-import { useInView } from 'react-intersection-observer';
-import { useObserverContext } from '../context/intersectionObserver';
-import { useEffect } from 'react';
-import Form from './Form';
-import Image from 'next/image';
-import { socialIcons } from '../lib/data';
-import { useTheme } from 'next-themes';
-import Glow from './common/Glow';
-import { SocialIcons } from '../@types';
-import ThemedImage from './common/ThemedImage';
+"use client";
+import { useInView } from "react-intersection-observer";
+import { useObserverContext } from "../context/intersectionObserver";
+import { useEffect } from "react";
+import Form from "./Form";
+import Image from "next/image";
+import { socialIcons } from "../lib/data";
+import { useTheme } from "next-themes";
+import Glow from "./common/Glow";
+import { SocialIcons } from "../@types";
+import ThemedImage from "./common/ThemedImage";
 
 function Contact() {
   const { inView: contactInView, ref: contactRef, entry } = useInView();
@@ -16,7 +16,7 @@ function Contact() {
   // const { theme, resolvedTheme } = useTheme();
   useEffect(() => {
     if (entry?.isIntersecting) {
-      setActiveSection('contact');
+      setActiveSection("contact");
       // entry?.target.scrollIntoView({
       //   behavior: 'smooth',
       //   block: 'center',
@@ -27,7 +27,7 @@ function Contact() {
   return (
     <div
       id="contact"
-      className=" flex flex-col lg:flex-row  justify-around items-center w-screen my-8 min-h-screen "
+      className=" flex flex-col lg:flex-row  justify-around items-center w-screen my-8 min-h-screen mb-20"
     >
       <div className="flex gap-4 flex-col  ">
         <h3

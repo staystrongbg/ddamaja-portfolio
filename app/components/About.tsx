@@ -28,6 +28,10 @@ function About() {
       <h3 ref={aboutRef} className="text-[4em] dark:text-[#6ae2d0]  relative">
         About me
       </h3>
+      <div className="relative w-[150px] h-[150px] block md:hidden rounded-full overflow-hidden">
+        <Image src={me} fill alt="Zoran" objectFit="cover" className="  " />
+        <div className="absolute inset-0 bg-gray-300 mix-blend-multiply"></div>
+      </div>
       <div className="flex gap-8">
         <div className="relative w-[150px] hidden md:block rounded-lg overflow-hidden">
           <Image src={me} fill alt="Zoran" objectFit="cover" className="  " />
@@ -47,8 +51,8 @@ function About() {
             <br />
             <br />
             {/* <b>Summary</b>
-            <br />I am working with <b>JavaScript</b> for 9 years, 4 years with
-            <b> React.js</b> and over 2 years with <b>Next.js</b>. These have
+            <br />I am working with <b>JavaScript</b> for 11 years, 6 years with
+            <b> React.js</b> and over 3 years with <b>Next.js</b>. These have
             been my main areas of focus.
             <br />
             <br /> */}

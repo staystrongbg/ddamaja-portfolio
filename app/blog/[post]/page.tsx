@@ -1,4 +1,5 @@
-export const revalidate = 60;
+//ISR
+// export const revalidate = 60;
 
 import Tag from "@/app/components/common/Tag";
 import { getPost } from "@/app/lib/getPost";

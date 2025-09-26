@@ -1,4 +1,5 @@
-export const revalidate = 60;
+//ISR
+// export const revalidate = 60;
 
 import { getAllPosts } from "../lib/getPostsss";
 import Search from "../components/Search";
@@ -22,7 +23,6 @@ export default async function Blog() {
 
   const flatenedArray = posts.flatMap((post) => post.tags); //posts objects with tags[]
   const uniqueTags = [...new Set(flatenedArray)];
-
   return (
     <div className="my-20 flex lg:flex-row flex-col gap-4 w-[90%] m-auto">
       <div className="lg:w-[20%] w-full justify-center flex flex-wrap h-fit gap-2 pt-20 relative">
