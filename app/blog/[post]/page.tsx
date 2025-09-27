@@ -34,10 +34,10 @@ export default async function Post({
           </Tag>
         ))}
       </div>
-      <div className="relative w-[800px] h-[600px] text-gray-800">
+      <div className="relative w-full md:h-[600px] h-[400px] text-gray-800">
         <Image src={post.image} alt={post.title} fill objectFit="contain" />
       </div>
-      <div className="text-left">
+      <div className="text-left px-4">
         <PortableText value={post.text} />
       </div>
     </div>

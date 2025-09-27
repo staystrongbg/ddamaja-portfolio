@@ -5,7 +5,6 @@ import Footer from "./components/Footer";
 import { ralewaySans } from "./lib/fonts";
 import { ThemeProvider } from "./components/Theme-provider";
 import { ObserverProvider } from "./context/intersectionObserver";
-import { PostProvider } from "./context/postContext";
 
 export const metadata: Metadata = {
   title: "Zoran - Javascript Developer",
@@ -19,8 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <PostProvider>
-        <ObserverProvider>
+      <ObserverProvider>
           <body className={`${ralewaySans.className} overflow-x-hidden`}>
             <ThemeProvider attribute="class" defaultTheme="dark">
               <div
@@ -35,7 +33,6 @@ export default function RootLayout({
             </ThemeProvider>
           </body>
         </ObserverProvider>
-      </PostProvider>
     </html>
   );
 }
