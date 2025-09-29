@@ -19,20 +19,20 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <ObserverProvider>
-          <body className={`${ralewaySans.className} overflow-x-hidden`}>
-            <ThemeProvider attribute="class" defaultTheme="dark">
-              <div
-                className={`min-h-screen w-screen bg-[white] dark:bg-[#181123] flex-col flex-container-center`}
-              >
-                <Navigation />
-                <main className="flex-col w-full flex-container-center min-h-[85vh]">
-                  {children}
-                </main>
-                <Footer />
-              </div>
-            </ThemeProvider>
-          </body>
-        </ObserverProvider>
+        <body className={`${ralewaySans.className} overflow-x-hidden`}>
+          <ThemeProvider attribute="class" defaultTheme="dark">
+            <div
+              className={`min-h-screen w-screen bg-[white] dark:bg-[#181123] flex-col flex-container-center`}
+            >
+              <Navigation />
+              <main className="flex-col w-full flex-container-center min-h-[85vh]">
+                {children}
+              </main>
+              <Footer />
+            </div>
+          </ThemeProvider>
+        </body>
+      </ObserverProvider>
     </html>
   );
 }

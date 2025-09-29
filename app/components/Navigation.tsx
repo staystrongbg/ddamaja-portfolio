@@ -35,10 +35,6 @@ function Navigation() {
     setIsMenuOpen(false);
   }, [path]);
 
-  if (path === "/blog") {
-    setActiveSection("blog");
-  }
-
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
