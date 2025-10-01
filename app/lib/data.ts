@@ -221,7 +221,7 @@ export const projects = [
     title: "Kameleon",
     id: 8,
     img: kameleon,
-    link: "https://sala-ketering-kameleon.com",
+    link: "https://sala-kameleon.vercel.app/",
     stack: [
       {
         title: "Nextjs",
@@ -247,7 +247,7 @@ export const projects = [
     title: "ASK23",
     id: 1,
     img: ask23,
-    link: "https://ask23.rs/",
+    link: "https://ask23.vercel.app/",
     stack: [
       {
         title: "Nextjs",

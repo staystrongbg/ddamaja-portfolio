@@ -8,6 +8,7 @@ import { useObserverContext } from "../context/intersectionObserver";
 import Theme from "./ThemeSwitcher";
 import { usePathname } from "next/navigation";
 import { FiMenu, FiX } from "react-icons/fi";
+import Link from "next/link";
 
 function Navigation() {
   const path = usePathname();
@@ -52,14 +53,14 @@ function Navigation() {
             }}
             className="relative w-full md:w-auto text-center"
           >
-            <a
+            <Link
               href={link.href}
               className={`block py-2 md:py-0 hover:text-fuchsia-500 transition-colors ${
                 isActiveSection ? "text-fuchsia-500" : ""
               }`}
             >
               {link.title}
-            </a>
+            </Link>
             {isActiveSection && (
               <div className="hidden md:block h-[1px] w-full bg-gradient-to-r from-violet-500 to-fuchsia-500 transition-all" />
             )}
