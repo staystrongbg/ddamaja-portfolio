@@ -1,7 +1,9 @@
 "use client";
 
+import { useCallback } from "react";
 import { usePostContext } from "../../context/postContext";
 import { postsApi } from "@/app/lib/api";
+import { Post } from "@/app/@types";
 
 type TagProps = {
   tag: string;
@@ -9,16 +11,25 @@ type TagProps = {
 };
 
 export default function Tag({ tag }: TagProps) {
-  const { setSearchResults } = usePostContext();
-  const filterByTag = async (tag: string) => {
-    if (tag === "all") {
-      const results = await postsApi.getAllPosts();
-      setSearchResults(results);
-      return;
-    }
-    const results = await postsApi.getPostByTag(tag);
-    setSearchResults(results);
-  };
+  const { setSearchResults, searchResults } = usePostContext();
+
+  const filterByTag = useCallback(
+    async (tag: string) => {
+      try {
+        let results: Post[];
+        if (tag === "all") {
+          results = await postsApi.getAllPosts();
+        } else {
+          results = await postsApi.getPostByTag(tag);
+        }
+        setSearchResults(results);
+      } catch (error) {
+        console.error("Error filtering posts by tag:", error);
+        setSearchResults([]);
+      }
+    },
+    [searchResults]
+  );
 
   return (
     <div

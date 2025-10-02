@@ -9,14 +9,15 @@ export default function PostRenderer({
   initialPosts: Post[];
 }) {
   const { searchResults } = usePostContext();
+  console.log(searchResults);
   return (
     <>
       {searchResults
-        ? searchResults.map((post, idx) => (
-            <BlogPostCard key={idx} post={post} />
+        ? searchResults.map((searchPost, idx) => (
+            <BlogPostCard key={idx} post={searchPost} />
           ))
-        : initialPosts.map((initPost, idx) => (
-            <BlogPostCard key={idx} post={initPost} />
+        : initialPosts.map((initialPost, idx) => (
+            <BlogPostCard key={idx} post={initialPost} />
           ))}
     </>
   );

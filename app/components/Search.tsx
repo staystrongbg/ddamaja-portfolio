@@ -1,19 +1,28 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { usePostContext } from "../context/postContext";
 import { postsApi } from "@/app/lib/api";
 
 export default function Search() {
-  const { setSearchResults } = usePostContext();
+  const { setSearchResults, searchResults } = usePostContext();
   const [term, setTerm] = useState("");
 
+  const handleSearch = useCallback(
+    async (searchTerm: string) => {
+      try {
+        const results = await postsApi.getPostBySearch(searchTerm);
+        setSearchResults(results);
+      } catch (error) {
+        console.error("Error searching posts:", error);
+        setSearchResults([]);
+      }
+    },
+    [searchResults]
+  );
+
   useEffect(() => {
-    const handleSearch = async () => {
-      const results = await postsApi.getPostBySearch(term);
-      setSearchResults(results);
-    };
-    handleSearch();
+    handleSearch(term);
   }, [term]);
 
   const searchRef = useRef<HTMLInputElement>(null);
