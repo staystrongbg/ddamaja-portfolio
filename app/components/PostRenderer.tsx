@@ -15,8 +15,8 @@ export default function PostRenderer({
         ? searchResults.map((post, idx) => (
             <BlogPostCard key={idx} post={post} />
           ))
-        : initialPosts.map((post, idx) => (
-            <BlogPostCard key={idx} post={post} />
+        : initialPosts.map((initPost, idx) => (
+            <BlogPostCard key={idx} post={initPost} />
           ))}
     </>
   );

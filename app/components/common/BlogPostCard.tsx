@@ -18,7 +18,12 @@ export default function BlogPostCard({ post }: { post: Post }) {
     <Link href="/blog/[post]" as={`/blog/${post.id}`} onClick={inputReset}>
       <article className="z-10 perspective-right rounded-lg overflow-hidden md:w-[380px] w-[280px] h-[600px] bg-white dark:bg-[#111] transition-all shadow-xl">
         <div className="relative post-image-container w-full h-[300px]">
-          <Image src={post.image} alt={post.title} fill style={{ objectFit: "contain" }} />
+          <Image
+            src={post.image}
+            alt={post.title}
+            fill
+            style={{ objectFit: "contain" }}
+          />
         </div>
         <div className="p-4">
           <div className="flex gap-2 flex-wrap">

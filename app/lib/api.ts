@@ -30,7 +30,7 @@ export const postsApi = {
                 "createdAt": _createdAt,
                 "text": text,
                 "tags": tags[]->tag,
-                "shortText": shortText
+                "shortText": shortDescription
               }`
       );
       return post;
@@ -48,6 +48,7 @@ export const postsApi = {
               "image": image.asset->url,
               "title": title,
               "text": text,
+              "shortText": shortDescription,
               "createdAt": _createdAt,
               "tags": tags[]->tag
               }`);
@@ -67,6 +68,7 @@ export const postsApi = {
             "image": image.asset->url,
             "title": title,
             "text": text,
+            "shortText": shortDescription,
             "createdAt": _createdAt,
             "tags": tags[]->tag
             }`);
