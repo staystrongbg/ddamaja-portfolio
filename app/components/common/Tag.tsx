@@ -10,7 +10,6 @@ type TagProps = {
 
 export default function Tag({ tag }: TagProps) {
   const { setSearchResults } = usePostContext();
-  console.log("tag", tag);
   const filterByTag = async (tag: string) => {
     if (tag === "all") {
       const results = await postsApi.getAllPosts();
