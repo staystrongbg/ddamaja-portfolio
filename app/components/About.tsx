@@ -29,12 +29,24 @@ function About() {
         About me
       </h3>
       <div className="relative w-[150px] h-[150px] block md:hidden rounded-full overflow-hidden">
-        <Image src={me} fill alt="Zoran" objectFit="cover" className="  " />
+        <Image
+          src={me}
+          fill
+          alt="Zoran"
+          style={{ objectFit: "cover" }}
+          className="  "
+        />
         <div className="absolute inset-0 bg-gray-300 mix-blend-multiply"></div>
       </div>
       <div className="flex gap-8">
         <div className="relative w-[150px] hidden md:block rounded-lg overflow-hidden">
-          <Image src={me} fill alt="Zoran" objectFit="cover" className="  " />
+          <Image
+            src={me}
+            fill
+            alt="Zoran"
+            style={{ objectFit: "cover" }}
+            className="  "
+          />
           <div className="absolute inset-0 bg-gray-300 mix-blend-multiply"></div>
         </div>
         <div>

@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { getAllPosts } from '@/app/lib/getPostsss';
-import { usePostContext } from '../../context/postContext';
+import { usePostContext } from "../../context/postContext";
+import { postsApi } from "@/app/lib/api";
 
 type TagProps = {
   tag: string;
@@ -10,23 +10,15 @@ type TagProps = {
 
 export default function Tag({ tag }: TagProps) {
   const { setSearchResults } = usePostContext();
-
+  console.log("tag", tag);
   const filterByTag = async (tag: string) => {
-    try {
-      const results =
-        await getAllPosts(`*[_type == "post" && tags[]->tag match "${tag}*"]{
-        "id": slug.current,
-        "image": image.asset->url,
-        "title": title,
-        "text": text,
-        "createdAt": _createdAt,
-        "tags": tags[]->tag
-        }`);
-
+    if (tag === "all") {
+      const results = await postsApi.getAllPosts();
       setSearchResults(results);
-    } catch (error) {
-      console.error(error);
+      return;
     }
+    const results = await postsApi.getPostByTag(tag);
+    setSearchResults(results);
   };
 
   return (

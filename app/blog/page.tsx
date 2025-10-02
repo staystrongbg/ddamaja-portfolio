@@ -1,42 +1,65 @@
 //ISR
 // export const revalidate = 60;
 
-import { getAllPosts } from "../lib/getPostsss";
 import Search from "../components/Search";
 import PostRenderer from "../components/PostRenderer";
 import Tag from "../components/common/Tag";
+import { Metadata } from "next";
+import { postsApi } from "../lib/api";
 
-export default async function Blog() {
-  const posts = await getAllPosts(`*[_type == "post"]{
-    "id": slug.current,
-    "image": image.asset->url,
-    "title": title,
-    "text": text,
-    "shortText": shortDescription,
-    "createdAt": _createdAt,
-    "tags": tags[]->tag
-  }`);
+export async function generateMetadata(): Promise<Metadata> {
+  const posts = await postsApi.getAllPosts();
 
   if (!posts) {
-    throw new Error("No posts");
+    return {
+      title: "Blog",
+      description: "Blog",
+    };
   }
 
-  const flatenedArray = posts.flatMap((post) => post.tags); //posts objects with tags[]
-  const uniqueTags = [...new Set(flatenedArray)];
-  return (
-    <div className="my-20 flex lg:flex-row flex-col gap-4 w-[90%] m-auto">
-      <div className="lg:w-[20%] w-full justify-center flex flex-wrap h-fit gap-2 pt-20 relative">
-        <h3 className="text-3xl font-bold absolute top-2 left-2 w-full">
-          TOPICS
-        </h3>
+  return {
+    title: "Blog",
+    description: "Blog",
+    openGraph: {
+      title: "Blog",
+      description: "Blog",
+      images: [
+        {
+          url: posts[0].image,
+          alt: posts[0].title,
+        },
+      ],
+    },
+  };
+}
 
-        {posts && uniqueTags.map((tag, idx) => <Tag key={idx} tag={tag} />)}
+export default async function Blog() {
+  const posts = await postsApi.getAllPosts();
+
+  if (!posts) {
+    return <div>No posts found</div>;
+  }
+
+  const flatenedArray = posts.flatMap((post) => post.tags);
+  const uniqueTags = [...new Set(flatenedArray), "all"];
+  return (
+    <div className="my-20 w-[90%] m-auto">
+      {/* Search at the top */}
+      <div className="mb-8">
+        <Search />
       </div>
-      <div className=" grid 2xl:grid-cols-3 xl:grid-cols-2 lg:grid-cols-1 gap-8 relative pt-20 place-items-center">
-        <div className="absolute top-2 left-1/2 -translate-x-1/2 w-fit z-50">
-          <Search />
+
+      <div className="flex lg:flex-row flex-col gap-4">
+        <div className="lg:w-[20%] w-full justify-center flex flex-wrap h-fit gap-2 pt-20 relative">
+          <h3 className="text-3xl font-bold absolute top-2 left-2 w-full">
+            TOPICS
+          </h3>
+          {posts && uniqueTags.map((tag, idx) => <Tag key={idx} tag={tag} />)}
         </div>
-        <PostRenderer posts={posts} />
+
+        <div className="grid 2xl:grid-cols-3 xl:grid-cols-2 lg:grid-cols-1 gap-8 relative pt-20 place-items-center">
+          <PostRenderer initialPosts={posts} />
+        </div>
       </div>
     </div>
   );

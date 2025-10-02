@@ -1,20 +1,23 @@
-'use client';
+"use client";
 
-import { Post } from '../@types';
-import { usePostContext } from '../context/postContext';
-import BlogPostCard from './common/BlogPostCard';
-export default function PostRenderer({ posts }: { posts: Post[] }) {
+import { Post } from "../@types";
+import { usePostContext } from "../context/postContext";
+import BlogPostCard from "./common/BlogPostCard";
+export default function PostRenderer({
+  initialPosts,
+}: {
+  initialPosts: Post[];
+}) {
   const { searchResults } = usePostContext();
-
   return (
     <>
-      {posts &&
-        !searchResults &&
-        posts.map((post, idx) => <BlogPostCard key={idx} post={post} />)}
-      {searchResults &&
-        searchResults.map((post, idx) => (
-          <BlogPostCard key={idx} post={post} />
-        ))}
+      {searchResults
+        ? searchResults.map((post, idx) => (
+            <BlogPostCard key={idx} post={post} />
+          ))
+        : initialPosts.map((post, idx) => (
+            <BlogPostCard key={idx} post={post} />
+          ))}
     </>
   );
 }
